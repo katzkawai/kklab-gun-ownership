@@ -41,7 +41,7 @@ The classification is **not** stored per-country. It is derived in `app.js` `cat
 | `prohibited` | `prohibitedCodes` | 原則禁止 (D) |
 | `purpose` | *everything else* | 目的限定 (B) |
 
-Consequences: adding a country to `codePairs` silently makes it 目的限定; moving a country between categories means editing the lists, not a field. `codePairs` (`ISO3:ISO2`) is the master roster; `supplementalCodes` (`TWN XKX`) are shown but excluded from headline counts. Country names come from `Intl.DisplayNames` (ja/en) keyed on ISO2, overridden by `customNames`. `notes` (per-country Japanese summary), `officialSources` (primary-law URL; fallback is a Wikipedia anchor built from the English name), and `markers` (lon/lat for microstates too small to click) are all keyed by ISO3 and optional.
+Consequences: adding a country to `codePairs` silently makes it 目的限定; moving a country between categories means editing the lists, not a field. `codePairs` (`ISO3:ISO2`) is the master roster; `supplementalCodes` (`TWN XKX`) are shown but excluded from headline counts. Country names come from `Intl.DisplayNames` (ja/en) keyed on ISO2, overridden by `customNames`. `notes` (per-country Japanese summary), `officialSources` (primary-law URL), `wikipediaSections` (section anchor on the Wikipedia overview page; countries in neither fall back to `#Table`), and `markers` (lon/lat for microstates too small to click) are all keyed by ISO3 and optional.
 
 The category keys (`accessible`/`purpose`/`exceptional`/`prohibited`) are load-bearing across all three files: CSS custom properties and `.swatch-*`/`.country.*`/`.status-label.*` classes in `styles.css`, `data-filter`/`data-count` attributes in `index.html`, and `CATEGORY_META` in `app.js`. Renaming one requires touching all of them.
 

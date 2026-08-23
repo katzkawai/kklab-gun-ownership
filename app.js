@@ -119,11 +119,12 @@
     if (raw.officialSources[country.code3]) {
       return { url: raw.officialSources[country.code3], label: "公的資料を確認" };
     }
-    const anchor = country.en.replaceAll(" ", "_");
-    return {
-      url: `https://en.wikipedia.org/wiki/Overview_of_gun_laws_by_nation#${encodeURIComponent(anchor)}`,
-      label: "比較表の脚注を確認",
-    };
+    const base = "https://en.wikipedia.org/wiki/Overview_of_gun_laws_by_nation";
+    const section = raw.wikipediaSections[country.code3];
+    if (section) {
+      return { url: `${base}#${section}`, label: "国別解説を確認" };
+    }
+    return { url: `${base}#Table`, label: "比較表の脚注を確認" };
   }
 
   function selectCountry(code, options = {}) {
