@@ -9,9 +9,9 @@ window.GUN_ATLAS_DATA = {
 
   accessibleCodes: `AFG AND ARM AUT AZE CAN CYP CZE SLV GTM HND IRQ ITA JOR KAZ KGZ LIE MCO NZL NIC PAK PAN RUS SSD CHE TJK TUR GBR USA URY YEM`,
 
-  exceptionalCodes: `AGO BEN BTN BFA BWA CAF CHN DJI DOM FJI GAB HTI IDN KIR LAO MLI MMR MOZ MYS NER PNG SDN TCD TWN UGA VEN VNM`,
+  exceptionalCodes: `AGO BEN BTN BFA BWA CAF CHN DJI DOM FJI GAB GIN HTI IDN KIR LAO MLI MMR MOZ MYS NPL NER PNG SYC SGP SDN TCD TWN UGA VEN VNM`,
 
-  prohibitedCodes: `BRN KHM COM ERI GNB MDV MHL NRU PRK PLW SLB SOM TLS VAT SYC`,
+  prohibitedCodes: `BRN KHM COM ERI GNB MDV MHL NRU PRK PLW SLB SOM TLS VAT`,
 
   supplementalCodes: `TWN XKX`,
 
@@ -39,16 +39,19 @@ window.GUN_ATLAS_DATA = {
     DEU: "狩猟・競技・収集などの必要性、専門知識、信頼性、保管要件を満たす許可制です。",
     FJI: "2000年に民間向け銃器免許の発給が停止され、一般市民の新規取得は実務上認められていません。",
     GBR: "散弾銃・一部ライフルは証明書制度の対象です。グレートブリテンでは大半の拳銃が禁止され、北アイルランドは制度が異なります。",
+    GIN: "狩猟目的の許可制度はありますが、比較表上は長銃・拳銃とも取得が制限的とされ、一般市民の新規取得は限定的です。",
     JPN: "狩猟・有害鳥獣駆除・標的射撃など、認められた目的と警察の許可が必要です。一般市民の拳銃所持は原則として認められていません。",
     KHM: "一般市民による銃器の所持は法令上原則禁止です。軍・警察など公的機関の例外はこの分類に含みません。",
     KOR: "狩猟・競技目的などに限る許可制で、銃器は通常、警察署など指定施設で保管されます。",
     MEX: "狩猟・競技・収集などの目的と登録が必要です。合法販売経路と認められる口径・銃種は強く限定されています。",
     NZL: "免許と適格性審査により一般的な長銃を取得できますが、拳銃や禁止・規制銃器には追加要件があります。",
+    NPL: "許可制ですが、比較表上は長銃の免許発給は稀で拳銃は認められないとされ、一般市民の新規取得は極めて限定的です。",
     PRK: "2009年の法制度において一般市民による銃器所持は原則禁止と整理されています。",
     PSE: "ヨルダン川西岸は許可制、ガザ地区は制度と運用が異なります。地域差が大きいため概括的な区分です。",
     RUS: "散弾銃には通常の免許経路があり、ライフルは一定期間の散弾銃所持歴など追加要件を伴います。",
-    SGP: "射撃競技などの限定目的に対する厳格な許可制で、一般的な自宅保管・自衛目的の取得は想定されていません。",
+    SGP: "射撃クラブ会員など限定目的に対する厳格な許可制で、銃器は原則として射撃場等で保管されます。一般市民が自宅で所持する経路は実務上ほぼなく、例外的区分としています。",
     SOM: "一般市民の所持は法制度上原則禁止と整理しています。実際の武器流通・統治状況とは一致しない場合があります。",
+    SYC: "1977年以降、民間向け銃器免許の発給が停止されています。法令上の制度は残るため、発給停止を根拠とする例外的区分としています。",
     TWN: "先住民族の狩猟など狭い例外を除き、一般市民による実銃の新規取得は極めて限定的です。",
     UKR: "狩猟・競技・収集などを目的とする許可制です。戦時下の特例・運用は通常制度と異なる場合があります。",
     USA: "連邦法の欠格要件に加え、取得許可・登録・待機期間などは州ごとに大きく異なります。多くの州では一部銃種に購入許可を要しません。",
