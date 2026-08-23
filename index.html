@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="世界195か国の民間人による銃所持制度を、一般要件・目的限定・例外的・原則禁止の4段階で比較するインタラクティブ地図。"
+    />
+    <meta name="theme-color" content="#102934" />
+    <meta property="og:title" content="CIVILIAN ACCESS ATLAS｜民間銃所持制度 世界地図" />
+    <meta
+      property="og:description"
+      content="民間人の銃所持は、どこまで認められているか。世界195か国を4段階で比較。"
+    />
+    <meta property="og:type" content="website" />
+    <title>CIVILIAN ACCESS ATLAS｜民間銃所持制度 世界地図</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#explorer">地図へ移動</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="ページ上部へ">
+        <span class="wordmark-mark" aria-hidden="true">§</span>
+        <span>CIVILIAN<br />ACCESS ATLAS</span>
+      </a>
+      <nav class="site-nav" aria-label="ページ内ナビゲーション">
+        <a href="#country-list">国一覧</a>
+        <a href="#methodology">判定方法</a>
+        <a href="#sources">出典</a>
+      </nav>
+      <p class="edition">EDITION <b>2026.08</b></p>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="kicker"><span>195 COUNTRIES</span> / CIVILIAN FIREARM POSSESSION</p>
+          <h1 id="page-title">民間人の銃所持は、<br /><em>どこまで</em>認められているか。</h1>
+          <p class="hero-lede">
+            「所持できる国」は一枚岩ではありません。免許なしで取得できる制度から、狩猟・競技などの目的を要する許可制、特別許可、原則禁止まで。各国の制度上の入口を同じ物差しで俯瞰します。
+          </p>
+        </div>
+        <div class="hero-index" aria-label="この資料について">
+          <div>
+            <span class="index-label">SCOPE</span>
+            <strong>193 + 2</strong>
+            <span>国連加盟国＋オブザーバー国</span>
+          </div>
+          <div>
+            <span class="index-label">MEASURE</span>
+            <strong>4</strong>
+            <span>取得制度の区分</span>
+          </div>
+          <div>
+            <span class="index-label">REVIEWED</span>
+            <strong>2026.08</strong>
+            <span>最終確認</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="explorer" id="explorer" aria-labelledby="map-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-code">MAP / 01</p>
+            <h2 id="map-title">取得制度の世界分布</h2>
+          </div>
+          <p>
+            国を選ぶと判定の読み方を表示します。色は実際の所持率や携帯の可否ではなく、一般市民が合法に取得するための制度を示します。
+          </p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="制度区分で絞り込む">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">
+            <span class="filter-swatch swatch-all" aria-hidden="true"></span>
+            すべて <b data-count="all">—</b>
+          </button>
+          <button class="filter-button" type="button" data-filter="accessible" aria-pressed="false">
+            <span class="filter-swatch swatch-accessible" aria-hidden="true"></span>
+            一般要件 <b data-count="accessible">—</b>
+          </button>
+          <button class="filter-button" type="button" data-filter="purpose" aria-pressed="false">
+            <span class="filter-swatch swatch-purpose" aria-hidden="true"></span>
+            目的限定 <b data-count="purpose">—</b>
+          </button>
+          <button class="filter-button" type="button" data-filter="exceptional" aria-pressed="false">
+            <span class="filter-swatch swatch-exceptional" aria-hidden="true"></span>
+            例外的 <b data-count="exceptional">—</b>
+          </button>
+          <button class="filter-button" type="button" data-filter="prohibited" aria-pressed="false">
+            <span class="filter-swatch swatch-prohibited" aria-hidden="true"></span>
+            原則禁止 <b data-count="prohibited">—</b>
+          </button>
+        </div>
+
+        <div class="map-shell">
+          <figure class="map-stage">
+            <div class="map-coordinate" aria-hidden="true">
+              <span>90°N</span><span>0° / GREENWICH</span><span>90°S</span>
+            </div>
+            <svg id="world-map" role="img" aria-labelledby="map-svg-title map-svg-desc">
+              <title id="map-svg-title">民間銃所持制度の世界地図</title>
+              <desc id="map-svg-desc">各国を一般要件、目的限定、例外的、原則禁止の4区分で色分けした地図です。</desc>
+            </svg>
+            <div class="map-controls" aria-label="地図の拡大縮小">
+              <button type="button" data-map-action="zoom-in" aria-label="拡大">＋</button>
+              <button type="button" data-map-action="zoom-out" aria-label="縮小">−</button>
+              <button type="button" data-map-action="reset" aria-label="表示をリセット">↺</button>
+            </div>
+            <p class="map-caption">境界線は法的地位についての見解を示すものではありません。</p>
+            <div class="map-tooltip" id="map-tooltip" role="status" aria-hidden="true"></div>
+          </figure>
+
+          <aside class="country-panel" id="country-panel" aria-live="polite">
+            <div class="panel-topline">
+              <span id="panel-code">JP / JPN</span>
+              <span id="panel-coordinate">36°N · 138°E</span>
+            </div>
+            <div class="panel-main">
+              <p class="status-label purpose" id="panel-status">目的限定で認められる</p>
+              <h3 id="panel-country">日本</h3>
+              <p class="panel-country-en" id="panel-country-en">Japan</p>
+              <p class="panel-summary" id="panel-summary">
+                狩猟・有害鳥獣駆除・標的射撃など、認められた目的と警察の許可が必要です。一般市民の拳銃所持は原則として認められていません。
+              </p>
+            </div>
+            <dl class="panel-definition">
+              <div>
+                <dt>この区分の意味</dt>
+                <dd id="panel-definition">狩猟・競技・収集・自衛など、法律上認められた目的と許可が必要。</dd>
+              </div>
+              <div>
+                <dt>比較対象</dt>
+                <dd>一般市民による新規取得・所持</dd>
+              </div>
+            </dl>
+            <a class="source-link" id="panel-source" href="https://elaws.e-gov.go.jp/document?lawid=333AC0000000006" target="_blank" rel="noreferrer">
+              判定根拠を確認 <span aria-hidden="true">↗</span>
+            </a>
+          </aside>
+        </div>
+
+        <div class="legend-notes" aria-label="凡例の詳しい説明">
+          <article>
+            <span class="legend-number">A</span>
+            <h3>一般要件</h3>
+            <p>特定目的の立証を原則とせず、欠格要件・免許・登録などの一般要件を満たせば少なくとも一部銃種を取得可能。</p>
+          </article>
+          <article>
+            <span class="legend-number">B</span>
+            <h3>目的限定</h3>
+            <p>狩猟、競技、収集、自衛など、法令上認められた目的と許可が必要。認められる銃種は国ごとに異なる。</p>
+          </article>
+          <article>
+            <span class="legend-number">C</span>
+            <h3>例外的</h3>
+            <p>特別許可、職業・身分要件、発給停止などにより、一般市民の新規取得が極めて限定的、または実務上困難。</p>
+          </article>
+          <article>
+            <span class="legend-number">D</span>
+            <h3>原則禁止</h3>
+            <p>一般市民による銃器の新規取得・所持を法令上原則として認めない。公的機関などの例外は含みません。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="country-directory" id="country-list" aria-labelledby="list-title">
+        <div class="section-heading list-heading">
+          <div>
+            <p class="section-code">INDEX / 02</p>
+            <h2 id="list-title">国・地域から探す</h2>
+          </div>
+          <label class="search-box">
+            <span class="visually-hidden">国名を検索</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.6-4.6m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" /></svg>
+            <input id="country-search" type="search" autocomplete="off" placeholder="国名・英語名・国コードで検索" />
+          </label>
+        </div>
+        <p class="result-summary" id="result-summary">読み込み中…</p>
+        <div class="country-groups" id="country-groups"></div>
+        <p class="supplement-note">
+          ※ 集計は国連加盟193か国と国連オブザーバー2か国。台湾・コソボは比較のため補足表示し、集計から除外しています。
+        </p>
+      </section>
+
+      <section class="methodology" id="methodology" aria-labelledby="method-title">
+        <div>
+          <p class="section-code light">METHOD / 03</p>
+          <h2 id="method-title">この地図が示すもの、<br />示さないもの。</h2>
+        </div>
+        <div class="method-copy">
+          <p class="method-lede">
+            判定対象は「一般市民が、少なくとも一種類の実銃を合法に新規取得・所持できる制度上の経路があるか」です。
+          </p>
+          <div class="method-grid">
+            <div>
+              <h3>含める</h3>
+              <p>長銃・散弾銃・拳銃のうち少なくとも一部。免許、登録、適格性審査、目的要件、行政裁量も含めて分類します。</p>
+            </div>
+            <div>
+              <h3>含めない</h3>
+              <p>携帯（carry）の可否、違法銃、実際の普及率、軍・警察、民間警備会社のみの制度、エアガンは判定対象外です。</p>
+            </div>
+            <div>
+              <h3>注意点</h3>
+              <p>連邦制、銃種、地域、法執行の実態により例外があります。比較用の概観であり、法的助言ではありません。</p>
+            </div>
+            <div>
+              <h3>更新方針</h3>
+              <p>制度変更を確認した場合はデータと確認日を更新します。個別の判断は必ず当該国の最新法令・所管官庁で確認してください。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sources" id="sources" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-code">SOURCES / 04</p>
+            <h2 id="sources-title">出典とデータ</h2>
+          </div>
+          <p>国際比較資料を土台に、各区分の定義に合わせて編集・要約しています。一次法令へのリンクが確認できた国は詳細パネルから参照できます。</p>
+        </div>
+        <ol class="source-list">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Small Arms Survey — “Balancing Act: Regulation of Civilian Firearm Possession”</h3>
+              <p>民間銃所持制度の比較枠組み、許可制・正当理由・銃種制限の定義に使用。</p>
+            </div>
+            <a href="https://www.smallarmssurvey.org/sites/default/files/resources/Small-Arms-Survey-2011-Chapter-09-EN.pdf" target="_blank" rel="noreferrer">PDF ↗</a>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Overview of gun laws by nation</h3>
+              <p>各国の取得目的、長銃・拳銃の許可状況を横断確認する比較表として使用。個別脚注から各国法令・政府資料を確認。</p>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Overview_of_gun_laws_by_nation" target="_blank" rel="noreferrer">TABLE ↗</a>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Small Arms Survey — Global Firearms Holdings</h3>
+              <p>合法な民間保有の定義と、政府回答を優先するデータ収集方針の確認に使用。</p>
+            </div>
+            <a href="https://www.smallarmssurvey.org/database/global-firearms-holdings/questionnaire" target="_blank" rel="noreferrer">DATA ↗</a>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Natural Earth / world.geo.json</h3>
+              <p>地図境界データ。小島嶼国は視認性のため位置マーカーを併用。</p>
+            </div>
+            <a href="https://github.com/holtzy/D3-graph-gallery/blob/master/DATA/world.geojson" target="_blank" rel="noreferrer">GEOJSON ↗</a>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>CIVILIAN ACCESS ATLAS</p>
+      <p>比較・教育目的の資料です。最終確認 2026年8月23日。</p>
+      <a href="https://github.com/katzkawai/kklab-gun-ownership" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </footer>
+
+    <script src="./vendor/d3.v7.min.js"></script>
+    <script src="./data/countries.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
