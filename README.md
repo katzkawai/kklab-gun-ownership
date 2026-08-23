@@ -52,6 +52,10 @@ python3 -m http.server 8000
 
 最終確認日: 2026-08-23
 
+## 制作
+
+本サイトは、OpenAIの **GPT-5.6 Sol** を使用して作成しました。
+
 ## ライセンス
 
 サイトのコードは [MIT License](./LICENSE) で公開します。`data/world.geojson` と `vendor/d3.v7.min.js` には、それぞれの配布元のライセンスが適用されます。国別分類は上記資料に基づく編集・要約です。
