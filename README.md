@@ -2,7 +2,7 @@
 
 世界195か国の「一般市民が合法に銃器を取得・所持するための制度上の入口」を可視化した、インタラクティブなコロプレス図です。
 
-公開サイト: <https://katzkawai.github.io/kklab-gun-ownership/>
+公開サイト: <https://katzkawai.org/kklab-gun-ownership/>
 
 ## 判定区分
 
